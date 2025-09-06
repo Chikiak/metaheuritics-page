@@ -41,3 +41,10 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 /frontend/next-env.d.ts
+
+# ===================================================================
+# Generated Files / Dev Utils
+# ===================================================================
+/dev-utils/
+structure.md
+consolidated_code.md

@@ -1,12 +1,31 @@
 "use client";
 
-import Header from "@/components/header";
-import ProblemCard from "@/components/problemCard";
+import Header from "@/components/layout/header";
+import ProblemCard from "@/components/main-page/problem-card";
 
 export default function Home() {
+    const problems = [
+        {
+            id: "products-balance",
+            title: "Products Balance",
+            description: "Determine the optimal production levels for various products to maximize profit, while respecting constraints on available materials."
+        },{
+            id: "products-balance",
+            title: "Products Balance",
+            description: "Determine the optimal production levels for various products to maximize profit, while respecting constraints on available materials."
+        },{
+            id: "products-balance",
+            title: "Products Balance",
+            description: "Determine the optimal production levels for various products to maximize profit, while respecting constraints on available materials."
+        },{
+            id: "products-balance",
+            title: "Products Balance",
+            description: "Determine the optimal production levels for various products to maximize profit, while respecting constraints on available materials."
+        },
+    ];
 
     return (
-        <div>
+        <div className="bg-gray-50">
             <Header />
             <main className="container mx-auto p-8">
                 <div className={"text-center mb-12"}>
@@ -16,7 +35,16 @@ export default function Home() {
                     </p>
                 </div>
                 <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"}>
-                    <ProblemCard slug={""} title={"Products Balance"} description={"Determine the optimal production levels for various products to maximize profit, while respecting constraints on available materials."} />
+                    {problems.map((problem) => (
+                        <ProblemCard
+                            key={problem.id}
+                            id={problem.id}
+                            title={problem.title}
+
+
+                            description={problem.description}
+                        />
+                    ))}
                 </div>
             </main>
         </div>
